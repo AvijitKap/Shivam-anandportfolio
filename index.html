@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Anand | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Shivam Anand – Computer Science student & Full-Stack Developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursorDot"></div>
+  <div id="cursorRing"></div>
+  <div id="cursorTrail"></div>
+
+  <!-- Immersive Background -->
+  <div id="bgNoise"></div>
+  <canvas id="particleCanvas"></canvas>
+  <div class="aurora-wrap">
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+    <div class="aurora a3"></div>
+    <div class="aurora a4"></div>
+  </div>
+  <div id="spotlight"></div>
+
+  <!-- ═══ NAVBAR ═══════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-brand" aria-label="Home">
+      <span class="brand-bracket">&lt;</span><span class="brand-name">SA</span><span class="brand-bracket">/&gt;</span>
+      <span class="nav-fullname">Shivam Anand</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero"             class="nav-link active" data-section="hero">Home</a></li>
+      <li><a href="#skills"           class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects"         class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#training"         class="nav-link" data-section="training">Training</a></li>
+      <li><a href="#certifications"   class="nav-link" data-section="certifications">Certifications</a></li>
+      <li><a href="#achievements"     class="nav-link" data-section="achievements">Wins</a></li>
+      <li><a href="#education"        class="nav-link" data-section="education">Education</a></li>
+      <li><a href="#contact"          class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#contact" class="btn-hire magnetic">
+        <span>Hire Me</span>
+        <div class="btn-glow"></div>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ══════════════════════════════════════════ -->
+  <section id="hero">
+    <!-- Floating code fragments (decorative) -->
+    <div class="code-fragments" aria-hidden="true">
+      <span class="cf cf1">const dev = () =&gt; 🚀</span>
+      <span class="cf cf2">&lt;React /&gt;</span>
+      <span class="cf cf3">while(learning){}</span>
+      <span class="cf cf4">npm run wow</span>
+      <span class="cf cf5">#include&lt;cpp&gt;</span>
+      <span class="cf cf6">SELECT * FROM skills</span>
+    </div>
+
+    <div class="hero-content reveal-left">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        Available for work
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-hi" data-parallax="0.2">Hello, I'm</span>
+        <span class="hero-name glitch" data-text="Shivam Anand">Shivam Anand</span>
+      </h1>
+      <div class="hero-tw-wrap">
+        <span class="tw-pre">&gt;&nbsp;</span>
+        <span id="typewriter"></span><span class="tw-caret"></span>
+      </div>
+      <p class="hero-desc">
+        Computer Science Engineer passionate about crafting high-performance, 
+        scalable digital experiences. I turn complex problems into elegant code.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary magnetic" id="ctaProjects">
+          <span class="btn-text">View Projects</span>
+          <span class="btn-arrow">→</span>
+          <div class="btn-glow"></div>
+        </a>
+        <a href="mailto:anandshivam545@gmail.com" class="btn-secondary magnetic">
+          <span>Get In Touch</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number count" data-target="30">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">LeetCode Solved</span>
+        </div>
+        <div class="vdivider"></div>
+        <div class="stat-item">
+          <span class="stat-number count" data-target="3">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="vdivider"></div>
+        <div class="stat-item">
+          <span class="stat-number count" data-target="5">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="vdivider"></div>
+        <div class="stat-item">
+          <span class="stat-number">7.8</span>
+          <span class="stat-label">CGPA / 10</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal-right">
+      <div class="orbit-scene" id="orbitScene">
+        <div class="orbit-ring r1"></div>
+        <div class="orbit-ring r2"></div>
+        <div class="orbit-ring r3"></div>
+        <!-- Orbiting tech dots -->
+        <div class="orbit-dot od1"><span>C++</span></div>
+        <div class="orbit-dot od2"><span>⚛ React</span></div>
+        <div class="orbit-dot od3"><span>Node</span></div>
+        <div class="orbit-dot od4"><span>MySQL</span></div>
+        <div class="orbit-dot od5"><span>🐍</span></div>
+        <div class="orbit-dot od6"><span>Java</span></div>
+        <!-- Core avatar -->
+        <div class="avatar-core" id="avatarCore">
+          <div class="avatar-inner">
+            <span class="avatar-letters">SA</span>
+            <div class="avatar-scan"></div>
+          </div>
+          <div class="core-halo h1"></div>
+          <div class="core-halo h2"></div>
+          <div class="core-halo h3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-cue" aria-hidden="true">
+      <div class="scue-bar"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header sr">
+        <span class="section-eyebrow">// 01 — skills</span>
+        <h2>Technical <em>Arsenal</em></h2>
+        <p>Tools & technologies I wield with confidence</p>
+      </div>
+      <div class="skills-tabs-wrap sr" style="--sr-delay:100ms">
+        <button class="stab active" data-tab="languages">Languages</button>
+        <button class="stab" data-tab="frontend">Frontend</button>
+        <button class="stab" data-tab="backend">Backend & DB</button>
+        <button class="stab" data-tab="soft">Soft Skills</button>
+      </div>
+
+      <div id="tab-languages" class="stab-content active">
+        <div class="skill-grid">
+          <div class="skill-card tilt sr" style="--sr-delay:0ms"   data-icon="C++" data-color="#a855f7" data-pct="90"><div class="sk-top"><div class="sk-icon s-cpp">C++</div><span>C++</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">90%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:80ms"  data-icon="JS"  data-color="#f59e0b" data-pct="85"><div class="sk-top"><div class="sk-icon s-js">JS</div><span>JavaScript</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">85%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:160ms" data-icon="C"   data-color="#22d3ee" data-pct="80"><div class="sk-top"><div class="sk-icon s-c">C</div><span>C</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">80%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:240ms" data-icon="☕"  data-color="#ef4444" data-pct="70"><div class="sk-top"><div class="sk-icon s-java">☕</div><span>Java</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">70%</div></div>
+        </div>
+      </div>
+      <div id="tab-frontend" class="stab-content">
+        <div class="skill-grid">
+          <div class="skill-card tilt sr" style="--sr-delay:0ms"   data-color="#ef4444" data-pct="95"><div class="sk-top"><div class="sk-icon s-html">H5</div><span>HTML5</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">95%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:80ms"  data-color="#22d3ee" data-pct="90"><div class="sk-top"><div class="sk-icon s-css">CSS</div><span>CSS3</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">90%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:160ms" data-color="#06b6d4" data-pct="85"><div class="sk-top"><div class="sk-icon s-tw">TW</div><span>Tailwind</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">85%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:240ms" data-color="#22d3ee" data-pct="80"><div class="sk-top"><div class="sk-icon s-react">⚛</div><span>React.js</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">80%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:320ms" data-color="#10b981" data-pct="75"><div class="sk-top"><div class="sk-icon s-node">N</div><span>Node.js</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">75%</div></div>
+        </div>
+      </div>
+      <div id="tab-backend" class="stab-content">
+        <div class="skill-grid">
+          <div class="skill-card tilt sr" style="--sr-delay:0ms"   data-color="#f59e0b" data-pct="80"><div class="sk-top"><div class="sk-icon s-sql">SQL</div><span>MySQL</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">80%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:80ms"  data-color="#10b981" data-pct="75"><div class="sk-top"><div class="sk-icon s-mongo">M</div><span>MongoDB</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">75%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:160ms" data-color="#a855f7" data-pct="70"><div class="sk-top"><div class="sk-icon s-gsap">GS</div><span>GSAP</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">70%</div></div>
+          <div class="skill-card tilt sr" style="--sr-delay:240ms" data-color="#a855f7" data-pct="65"><div class="sk-top"><div class="sk-icon s-php">PHP</div><span>PHP</span></div><div class="sk-bar"><div class="sk-fill"></div></div><div class="sk-pct">65%</div></div>
+        </div>
+      </div>
+      <div id="tab-soft" class="stab-content">
+        <div class="soft-chips sr">
+          <div class="soft-chip tilt">⏰ Time Management</div>
+          <div class="soft-chip tilt">🎯 Leadership</div>
+          <div class="soft-chip tilt">🤝 Teamwork</div>
+          <div class="soft-chip tilt">💡 Tech Enthusiast</div>
+          <div class="soft-chip tilt">🧩 Problem Solving</div>
+          <div class="soft-chip tilt">💬 Communication</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header sr">
+        <span class="section-eyebrow">// 02 — work</span>
+        <h2>Featured <em>Projects</em></h2>
+        <p>Handcrafted solutions that make an impact</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card tilt sr featured" style="--sr-delay:0ms">
+          <div class="pc-glow"></div>
+          <div class="pc-inner">
+            <div class="pc-top">
+              <div class="pc-icon pi-sagy">🏛️</div>
+              <div class="pc-links">
+                <a href="https://github.com/anandshivam23" target="_blank" rel="noopener" class="pcl" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <span class="pc-badge">⭐ Featured</span>
+            <h3>SAGY Website</h3>
+            <p class="pc-sub">Saansad Adarsh Gram Yojana</p>
+            <p class="pc-desc">Boosted UI effectiveness by <strong>30–40%</strong> with refined layouts. Managed full frontend-backend integration with React.js + Node.js — routing, API handling, seamless data flow.</p>
+            <div class="pc-metrics">
+              <div class="metric"><span class="m-val">+40%</span><span class="m-lbl">UI Boost</span></div>
+              <div class="metric"><span class="m-val">Full</span><span class="m-lbl">Stack</span></div>
+            </div>
+            <div class="pc-stack">
+              <span>HTML</span><span>CSS</span><span>React.js</span><span>Node.js</span>
+            </div>
+            <div class="pc-date">Nov 2025 – Dec 2025</div>
+          </div>
+        </div>
+
+        <div class="project-card tilt sr" style="--sr-delay:120ms">
+          <div class="pc-glow"></div>
+          <div class="pc-inner">
+            <div class="pc-top">
+              <div class="pc-icon pi-grocer">🛒</div>
+              <div class="pc-links">
+                <a href="https://github.com/anandshivam23" target="_blank" rel="noopener" class="pcl" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Global-Grocers</h3>
+            <p class="pc-sub">Multilingual E-Commerce</p>
+            <p class="pc-desc">Improved user satisfaction by <strong>25–30%</strong> via clean interface design. Connected Tailwind CSS frontend to a robust PHP + MySQL backend with scalable architecture.</p>
+            <div class="pc-metrics">
+              <div class="metric"><span class="m-val">+30%</span><span class="m-lbl">UX Gain</span></div>
+            </div>
+            <div class="pc-stack">
+              <span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span>
+            </div>
+            <div class="pc-date">Apr 2025 – May 2025</div>
+          </div>
+        </div>
+
+        <div class="project-card tilt sr" style="--sr-delay:240ms">
+          <div class="pc-glow"></div>
+          <div class="pc-inner">
+            <div class="pc-top">
+              <div class="pc-icon pi-bot">🤖</div>
+              <div class="pc-links">
+                <a href="https://github.com/anandshivam23" target="_blank" rel="noopener" class="pcl" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Strat-Bot Chatbot</h3>
+            <p class="pc-sub">AI Strategy Bot for Gamers</p>
+            <p class="pc-desc">Delivered an interactive real-time strategy assistant. Engineered cross-platform conversational UI with third-party API integration for live, seamless interactions.</p>
+            <div class="pc-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span>
+            </div>
+            <div class="pc-date">Apr 2025 – May 2025</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TRAINING ═══════════════════════════════════════ -->
+  <section id="training">
+    <div class="container">
+      <div class="section-header sr">
+        <span class="section-eyebrow">// 03 — growth</span>
+        <h2>Professional <em>Training</em></h2>
+        <p>Hands-on experience beyond the classroom</p>
+      </div>
+      <div class="training-solo sr">
+        <div class="internship-card tilt">
+          <div class="ic-badge">Internship</div>
+          <div class="ic-header">
+            <div class="ic-icon">💼</div>
+            <div>
+              <h3>DSA in C++ — Code Quest</h3>
+              <span class="ic-date">Jul 2025</span>
+            </div>
+          </div>
+          <ul class="ic-points">
+            <li>Mastered core data structures by solving <strong>30+ challenging C++ problems</strong> effectively</li>
+            <li>Created a practical Undo-Redo system using Stack to handle push/pop operations and maintain application state</li>
+            <li>Built strong conceptual understanding of arrays, queues, and linked lists and their real-world applications</li>
+          </ul>
+          <div class="ic-footer">
+            <div class="ic-stack"><span>C++</span></div>
+            <div class="ic-org">📍 Code Quest</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CERTIFICATIONS ════════════════════════════════════ -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header sr">
+        <span class="section-eyebrow">// 04 — credentials</span>
+        <h2>My <em>Certifications</em></h2>
+        <p>Verified skills &amp; continuous learning achievements</p>
+      </div>
+      <div class="cert-cards-grid">
+        <div class="cert-card-full tilt sr" style="--sr-delay:0ms">
+          <div class="ccf-icon">☕</div>
+          <div class="ccf-body">
+            <h3>Java Programming for Complete Beginners</h3>
+            <span class="ccf-org">Udemy</span>
+            <p class="ccf-desc">Comprehensive Java course covering OOP, data types, control flow, and application development fundamentals.</p>
+          </div>
+          <div class="ccf-meta">
+            <span class="ccf-date">Aug 2025</span>
+            <span class="ccf-badge">Completed</span>
+          </div>
+        </div>
+        <div class="cert-card-full tilt sr" style="--sr-delay:80ms">
+          <div class="ccf-icon">🔒</div>
+          <div class="ccf-body">
+            <h3>Privacy &amp; Security in Online Social Media</h3>
+            <span class="ccf-org">NPTEL</span>
+            <p class="ccf-desc">In-depth study of digital privacy, cybersecurity fundamentals, and secure online communication practices.</p>
+          </div>
+          <div class="ccf-meta">
+            <span class="ccf-date">May 2025</span>
+            <span class="ccf-badge">Completed</span>
+          </div>
+        </div>
+        <div class="cert-card-full tilt sr" style="--sr-delay:160ms">
+          <div class="ccf-icon">🎯</div>
+          <div class="ccf-body">
+            <h3>Object-Oriented Programming</h3>
+            <span class="ccf-org">Neo Collab</span>
+            <p class="ccf-desc">Mastered OOP principles including encapsulation, inheritance, polymorphism, and design patterns.</p>
+          </div>
+          <div class="ccf-meta">
+            <span class="ccf-date">Dec 2024</span>
+            <span class="ccf-badge">Completed</span>
+          </div>
+        </div>
+        <div class="cert-card-full tilt sr" style="--sr-delay:240ms">
+          <div class="ccf-icon">🐍</div>
+          <div class="ccf-body">
+            <h3>The Complete Python Course</h3>
+            <span class="ccf-org">Udemy</span>
+            <p class="ccf-desc">Full Python programming course covering scripting, data structures, file I/O, and real-world project building.</p>
+          </div>
+          <div class="ccf-meta">
+            <span class="ccf-date">Nov 2023</span>
+            <span class="ccf-badge">Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ACHIEVEMENTS ═══════════════════════════════════ -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header sr">
+        <span class="section-eyebrow">// 05 — wins</span>
+        <h2>Key <em>Achievements</em></h2>
+        <p>Milestones that shaped who I am</p>
+      </div>
+      <div class="ach-grid">
+        <div class="ach-card tilt sr" style="--sr-delay:0ms">
+          <div class="ach-icon">⚡</div>
+          <div class="ach-body">
+            <h3>LeetCode Solver</h3>
+            <p>Solved <strong>30+</strong> DSA problems strengthening logical reasoning and efficient coding under time pressure</p>
+            <a href="https://leetcode.com" target="_blank" rel="noopener" class="ach-link">View Profile →</a>
+          </div>
+          <div class="ach-date">Feb 2026</div>
+        </div>
+        <div class="ach-card tilt sr" style="--sr-delay:150ms">
+          <div class="ach-icon">⭐</div>
+          <div class="ach-body">
+            <h3>HackerRank 3-Star Silver</h3>
+            <p>Secured <strong>3-Star (Silver)</strong> badge in C &amp; C++ validating strong core language proficiency and problem-solving</p>
+            <a href="https://hackerrank.com" target="_blank" rel="noopener" class="ach-link">View Badge →</a>
+          </div>
+          <div class="ach-date">Nov 2023</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ══════════════════════════════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header sr">
+        <span class="section-eyebrow">// 06 — roots</span>
+        <h2>My <em>Education</em></h2>
+        <p>Academic foundations that power my growth</p>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-step sr" style="--sr-delay:0ms">
+          <div class="edu-connector"><div class="econ-dot active"></div><div class="econ-line"></div></div>
+          <div class="edu-card tilt current">
+            <span class="edu-live">● Current</span>
+            <div class="edu-icon">🎓</div>
+            <div class="edu-info">
+              <h3>Lovely Professional University</h3>
+              <p class="edu-deg">B.Tech – Computer Science & Engineering</p>
+              <div class="edu-row">
+                <span class="edu-cgpa">CGPA <strong>7.8/10</strong></span>
+                <span class="edu-loc">📍 Punjab, India</span>
+              </div>
+              <span class="edu-date">Aug 2023 – Present</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-step sr" style="--sr-delay:150ms">
+          <div class="edu-connector"><div class="econ-dot"></div><div class="econ-line"></div></div>
+          <div class="edu-card tilt">
+            <div class="edu-icon">📚</div>
+            <div class="edu-info">
+              <h3>Y.B.K. Intermediate College</h3>
+              <p class="edu-deg">Intermediate (12th) — 73%</p>
+              <div class="edu-row"><span class="edu-loc">📍 Muzaffarpur, Bihar</span></div>
+              <span class="edu-date">Apr 2022 – Mar 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-step sr" style="--sr-delay:300ms">
+          <div class="edu-connector"><div class="econ-dot"></div></div>
+          <div class="edu-card tilt">
+            <div class="edu-icon">🏫</div>
+            <div class="edu-info">
+              <h3>Holy Mission School</h3>
+              <p class="edu-deg">Matriculation (10th) — 65%</p>
+              <div class="edu-row"><span class="edu-loc">📍 Darbhanga, Bihar</span></div>
+              <span class="edu-date">Apr 2020 – Mar 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header sr">
+        <span class="section-eyebrow">// 07 — connect</span>
+        <h2>Let's <em>Talk</em></h2>
+        <p>Open to full-time roles, freelance & collaborations</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info sr">
+          <div class="ci-item">
+            <div class="ci-icon">✉️</div>
+            <div><span class="ci-label">Email</span><a href="mailto:anandshivam545@gmail.com" class="ci-val">anandshivam545@gmail.com</a></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">📱</div>
+            <div><span class="ci-label">Phone</span><a href="tel:+917050850143" class="ci-val">+91-7050850143</a></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">💼</div>
+            <div><span class="ci-label">LinkedIn</span><a href="https://linkedin.com/in/shivamanand19" target="_blank" rel="noopener" class="ci-val">linkedin.com/in/shivamanand19</a></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">🐱</div>
+            <div><span class="ci-label">GitHub</span><a href="https://github.com/anandshivam23" target="_blank" rel="noopener" class="ci-val">github.com/anandshivam23</a></div>
+          </div>
+          <!-- Terminal Easter Egg -->
+          <div class="terminal-box sr" style="--sr-delay:200ms">
+            <div class="tb-header"><span class="tb-dot r"></span><span class="tb-dot y"></span><span class="tb-dot g"></span><span class="tb-title">shivam@portfolio ~ </span></div>
+            <div class="tb-body" id="terminalBody">
+              <p><span class="t-prompt">$</span> whoami</p>
+              <p class="t-out" id="t1"></p>
+              <p><span class="t-prompt">$</span> skills --list</p>
+              <p class="t-out" id="t2"></p>
+              <p><span class="t-prompt">$</span> status</p>
+              <p class="t-out" id="t3"></p>
+              <p><span class="t-prompt">$</span> <span id="termCaret" class="t-blink">▋</span></p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form sr" id="contactForm" style="--sr-delay:100ms">
+          <div class="fg">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" placeholder="Your name" required />
+          </div>
+          <div class="fg">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" placeholder="your@email.com" required />
+          </div>
+          <div class="fg">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary magnetic" id="formSubmit">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-arrow">→</span>
+            <div class="btn-glow"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-bracket">&lt;</span><span class="brand-name">SA</span><span class="brand-bracket">/&gt;</span>
+        </div>
+        <p>Designed & Built by <span class="accent-txt">Shivam Anand</span> · 2025</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/shivamanand19" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/anandshivam23" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
